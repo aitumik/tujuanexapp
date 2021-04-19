@@ -17,8 +17,8 @@ class UserRepository {
         //use the api to create the user here
     }
 
-    suspend fun getUsers(): Any{
+    suspend fun getUsers(): List<User>{
         var users = service.getUsers();
-        return users
+        return arrayListOf<User>();
     }
 }
