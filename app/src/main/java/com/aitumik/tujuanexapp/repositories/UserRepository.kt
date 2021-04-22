@@ -3,6 +3,7 @@ package com.aitumik.tujuanexapp.repositories
 import androidx.lifecycle.LiveData
 import com.aitumik.tujuanexapp.api.TujuanexAPIService
 import com.aitumik.tujuanexapp.models.User
+import com.google.gson.Gson
 import retrofit2.Retrofit
 
 class UserRepository {
@@ -18,6 +19,7 @@ class UserRepository {
     }
 
     suspend fun getUsers(): List<User>{
+        //fetch a list of users here
         var users = service.getUsers();
         return arrayListOf<User>();
     }
